@@ -22,12 +22,31 @@ function addBinary(a,b) {
 // 348597 => [7,9,5,8,4,3]
 // 0 => [0]
 
-function digitize(n) {
-  return String(n).split('').map(Number).reverse()
-}
-
 // SOLUTION EXPLAINED
 // String() converts the input to a string
 // .split("") splits the strings characters with commas and places them into an array
 // .map(Number) maps over each item and reverts them back to a number
 // .reverse() reverses the array
+
+function digitize(n) {
+  return String(n).split('').map(Number).reverse()
+}
+
+// Complete the method that takes a boolean value and return a "Yes" string for true, or a "No" string for false.
+
+// SOLUTION EXPLAINED
+// if statement checks to see if the boolean is true which in this case it is since the only values that return false are 0, -0, null, false, NaN, undefined, and empty strings
+
+function boolToWord( bool ){
+  if(bool === true){
+    return "Yes"
+  } else {
+    return "No"
+  }
+}
+
+// My solution was a bit long and there is a shorter way to write it using a ternary operator
+
+function boolToWord( bool ){
+  return bool ? 'Yes':'No';
+}
