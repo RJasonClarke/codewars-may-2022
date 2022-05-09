@@ -50,3 +50,21 @@ function boolToWord( bool ){
 function boolToWord( bool ){
   return bool ? 'Yes':'No';
 }
+
+// Welcome. In this kata, you are asked to square every digit of a number and concatenate them.
+
+// For example, if we run 9119 through the function, 811181 will come out, because 92 is 81 and 12 is 1.
+
+// Note: The function accepts an integer and returns an integer
+
+function squareDigits(num){
+  let stringNum = String(num).split("")
+  let squared = stringNum.map(num => Math.pow(num, 2))
+  return Number(squared.join(""));
+}
+
+// Yet again my solution was a bit long. A shorter solution would be 
+
+function squareDigits(num){
+  return Number(('' + num).split('').map(function (val) { return val * val;}).join(''));
+}
